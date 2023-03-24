@@ -67,16 +67,16 @@ class App {
     this._getCoordinates();
     this._getData();
     form.addEventListener("submit", this._newWorkout.bind(this));
-    document.addEventListener("keydown", this._forMac.bind(this));
+    // document.addEventListener("keydown", this._forMac.bind(this));
     inputType.addEventListener("change", this._toggleWorkoutField);
     containerWorkouts.addEventListener("click", this._moveToPoint.bind(this));
     // containerWorkouts.addEventListener("click", this._removeWorkout.bind(this));
     // console.log(this.markers);
   }
 
-  _forMac(e) {
-    if (e.key === "Enter") this._newWorkout();
-  }
+  // _forMac(e) {
+  //   if (e.key === "Enter") this._newWorkout();
+  // }
   _getCoordinates() {
     navigator.geolocation.getCurrentPosition(
       this._loadMap.bind(this),
